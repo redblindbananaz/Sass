@@ -38,6 +38,8 @@ index.html
 
 - #### Bootstrap Download and Install:
 
+We can download Bootstrap [Bootstrap Download](https://getbootstrap.com/docs/5.0/getting-started/download/) to drop in the project and put the bootstrap folder in our vendor folder. And we can use the boostrap by linking it to our Scss.
+
 - #### Reset Css and base layout with scroll snap:
 
 ## Basic layout with grid:

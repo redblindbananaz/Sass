@@ -1,1 +1,15 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  margin: 0;
+}
+
+body {
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100dvh;
+  scroll-snap-align: start;
+  border: 1px solid red;
+}/*# sourceMappingURL=styles.css.map */

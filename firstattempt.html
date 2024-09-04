@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width height=device-height,initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    
+    <link rel = "stylesheet" href = "./vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+    />
+    <title>Sebastien Pernot</title>
+  </head>
+  <body>
+    <main>
+        <header>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+              </div>
+        </header>
+     
+      <section id="home">
+        <div class="container">
+          <div class="home-content">
+            <h1>Sebastien Pernot</h1>
+            <p>
+              I'm a full-stack developer with a passion for
+              building beautiful and functional websites.
+            </p>
+            <a href="#contact" class="btn">Contact Me</a>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+              I'm a full-stack developer with a passion for
+              building beautiful and functional websites. I
+              have experience working with a variety of
+              technologies including HTML, CSS, JavaScript,
+              React, Node.js, and MongoDB.
+            </p>
+            <p>
+              I'm currently looking for new opportunities to
+              work on exciting projects with a team of
+              talented developers. If you're interested in
+              working together, please don't hesitate to
+              contact me.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="resume">
+        <div class="container">
+          <div class="resume-content">
+            <h2>Resume</h2>
+            <div class="resume-item">
+              <h3>Education</h3>
+              <p>
+                Bachelor of Science in Computer Science,
+                University of California, Los Angeles
+              </p>
+            </div>
+            <div class="resume-item">
+              <h3>Experience</h3>
+              <p>
+                Full-Stack Developer, Company Name, 2020 -
+                Present
+              </p>
+              <p>
+                Front-End Developer, Company Name, 2018 -
+                2020
+              </p>
+            </div>
+            <div class="resume-item">
+              <h3>Skills</h3>
+              <p>
+                HTML, CSS, JavaScript, React, Node.js,
+                MongoDB
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+          <div class="portfolio-content">
+            
+            <div class="portfolio-item">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Project 1"
+              />
+              <h3>Project 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed ut purus eget nunc
+                tincidunt.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Project 2"
+              />
+              <h3>Project 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed ut purus eget nunc
+                tincidunt.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Project 3"
+              />
+              <h3>Project 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed ut purus eget nunc
+                tincidunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>
+              If you're interested in working together, please
+              don't hesitate to contact me.
+            </p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn">Send</button>
+                </form>
+      </section>
+    
+    </main>
+    <script>
+        const sections = document.querySelectorAll('section');
+        console.log(sections);
+        const totalSections = sections.length;
+        console.log(totalSections);
+        const main = document.querySelector('main');
+
+        main.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (main.scrollTop >= sectionTop && main.scrollTop < sectionTop + sectionHeight) {
+                    currentSectionId = section.id;
+                }
+                console.log("Current section:", currentSectionId);
+            });
+
+
+        });
+        // window.onscroll = function() {
+        //     console.log("Scrolling...");
+        //     myFunction();
+        // };
+
+        // function myFunction() {
+        //     console.log("Calculating progress...");
+        //     const sections = document.querySelectorAll('main section');
+        //     const totalSections = sections.length;
+        //     const currentScroll = window.scrollY;
+        //     const viewportHeight = window.innerHeight;
+
+        //     console.log("Current scroll:", currentScroll);
+        //     console.log("Viewport height:", viewportHeight);
+
+        //     let currentSection = 0;
+        //     sections.forEach((section, index) => {
+        //         const sectionTop = section.offsetTop;
+        //         if (currentScroll >= sectionTop - viewportHeight / 2) {
+        //             currentSection = index;
+        //         }
+        //     });
+
+        //     console.log("Current section:", currentSection);
+        //     const progress = (currentSection / (totalSections - 1)) * 100;
+        //     document.getElementById("myBar").style.width = progress + "%";
+        //     console.log("Progress:", progress);
+        // }
+    </script>
+    <script src = "./vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
