@@ -1,0 +1,18 @@
+@mixin bg-color($color) {
+  background-color: $color;
+}
+
+@mixin text($color) {
+  color: $color;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+@mixin hamburger($top-value: 0) {
+  position: absolute;
+  top: $top-value;
+  width: 2rem;
+  height: 4px;
+  background-color: $color-secondary;
+  transition: all 0.5s ease-in-out;
+}

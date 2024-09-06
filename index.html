@@ -17,27 +17,88 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="css/styles.css"
     />
     <title>Sebastien Pernot</title>
   </head>
   <body>
     <main>
-      <header></header>
+      <header class="container">
+        <div class="location">
+          <iframe
+            src="https://cdn.lottielab.com/l/63o7egYH4VCPrc.html"
+            width="24"
+            height="29"
+            frameborder="0"
+          ></iframe>
+          <div class="mask"></div>
+          <p>Christchurch,</p>
+          <span> NZ</span>
+        </div>
+        <div class="menu-btn">
+          <span class="menu-btn_burger"></span>
+        </div>
+        <nav class="nav">
+          <ul class="menu-nav">
+            <li class="menu-nav_item">
+              <a
+                href="#home"
+                class="menu-nav_link"
+                >Home</a
+              >
+            </li>
+
+            <li class="menu-nav_item">
+              <a
+                href="#about"
+                class="menu-nav_link"
+                >About Me</a
+              >
+            </li>
+            <li class="menu-nav_item">
+              <a
+                href="#projects"
+                class="menu-nav_link"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
 
       <section id="home">
         <div class="container">
-          <div class="home-content">
-            <h1>Sebastien Pernot</h1>
-            <p>
-              I'm a full-stack developer with a passion for building beautiful and
-              functional websites.
-            </p>
-            <a
-              href="#contact"
-              class="btn"
-              >Contact Me</a
+          <div
+            class="row justify-content-center align-items-center text-center text-md-left"
+          >
+            <div
+              class="col-10 col-md-4 d-flex justify-content-center justify-content-md-end order-md-2"
             >
+              <!-- Profile Picture -->
+              <img
+                src="path/to/profile-picture.jpg"
+                alt="Profile Picture"
+                class="img-fluid rounded-circle"
+                style="width: 150px; height: 150px; background-color: blueviolet"
+              />
+            </div>
+            <div class="col-10 col-md-8 order-md-1">
+              <span>Bonjour</span><span>, I'm</span>
+              <h1>Sebastien Pernot</h1>
+              <p>
+                <span>Welcome</span> to my digital space as I journey thought the realms
+                of <span>web & software development</span>.
+              </p>
+              <a
+                href="#contact"
+                class="btn"
+                >Contact Me</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -58,57 +119,14 @@
           </div>
         </div>
       </section>
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+        </div>
+      </section>
     </main>
-    <script>
-      const sections = document.querySelectorAll("section");
-      console.log(sections);
-      const totalSections = sections.length;
-      console.log(totalSections);
-      const main = document.querySelector("main");
-
-      main.addEventListener("scroll", () => {
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (
-            main.scrollTop >= sectionTop &&
-            main.scrollTop < sectionTop + sectionHeight
-          ) {
-            currentSectionId = section.id;
-          }
-          console.log("Current section:", currentSectionId);
-        });
-      });
-      // window.onscroll = function() {
-      //     console.log("Scrolling...");
-      //     myFunction();
-      // };
-
-      // function myFunction() {
-      //     console.log("Calculating progress...");
-      //     const sections = document.querySelectorAll('main section');
-      //     const totalSections = sections.length;
-      //     const currentScroll = window.scrollY;
-      //     const viewportHeight = window.innerHeight;
-
-      //     console.log("Current scroll:", currentScroll);
-      //     console.log("Viewport height:", viewportHeight);
-
-      //     let currentSection = 0;
-      //     sections.forEach((section, index) => {
-      //         const sectionTop = section.offsetTop;
-      //         if (currentScroll >= sectionTop - viewportHeight / 2) {
-      //             currentSection = index;
-      //         }
-      //     });
-
-      //     console.log("Current section:", currentSection);
-      //     const progress = (currentSection / (totalSections - 1)) * 100;
-      //     document.getElementById("myBar").style.width = progress + "%";
-      //     console.log("Progress:", progress);
-      // }
-    </script>
+    <script src="https://cdn.lottielab.com/s/lottie-player@1.x/player-web.min.js"></script>
     <script src="./vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>

@@ -1,0 +1,89 @@
+header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .location {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    p,
+    span {
+      align-content: center;
+    }
+    span {
+      color: $color-accent;
+      font-weight: 800;
+    }
+  }
+  .menu-nav {
+    display: flex;
+    align-self: center;
+    gap: 2rem;
+  }
+}
+
+.menu-btn {
+  visibility: hidden;
+  padding: 1rem;
+  align-self: center;
+  cursor: pointer;
+
+  .menu-btn_burger {
+    right: 1rem;
+    @include hamburger(2rem);
+  }
+  .menu-btn_burger::before {
+    content: "";
+    @include hamburger(-10px);
+  }
+  .menu-btn_burger::after {
+    content: "";
+    @include hamburger(10px);
+  }
+
+  .menu-btn_burger.open {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    background-color: transparent;
+  }
+  .menu-btn_burger.open::before {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+  .menu-btn_burger.open::after {
+    transform: rotate(-45deg) translate(8px, -7px);
+    width: 2rem;
+  }
+}
+
+li .menu-nav_item.active > a {
+  color: $color-accent;
+}
+ul a:hover,
+.social-icons a:hover {
+  color: $color-accent;
+  transition: all 0.4s ease-in-out;
+}
+// This is to hidde the watermark for lottieLab...
+.mask {
+  position: relative;
+  top: 27px;
+  left: -7px;
+  content: "";
+  background-color: $color-primary;
+  width: 7px;
+  height: 3px;
+  z-index: 300;
+}
+
+@media only screen and (max-width: 45em) {
+  .menu-btn {
+    visibility: visible;
+  }
+  header .menu-nav {
+    display: none;
+  }
+}

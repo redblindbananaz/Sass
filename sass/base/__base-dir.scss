@@ -1,7 +1,8 @@
 // This will contain all the base styles for the project
 // This will be imported into the main.scss file
-
 @import "reset.scss";
-@import "scrolling.scss";
+@import "mixins.scss";
+@import "basics.scss";
+@import "nav.scss";
 
 //Can add typo here...
