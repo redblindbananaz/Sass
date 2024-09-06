@@ -11,11 +11,13 @@ function toggle() {
         menu.classList.add('open');
         hamburger.classList.add('open');
         nav.classList.add('open');
+        navItems.forEach(item => item.classList.add('open'));
         showMenu = true;
     } else {
         menu.classList.remove('open');
         hamburger.classList.remove('open');
         nav.classList.remove('open');
+        navItems.forEach(item => item.classList.remove('open'));
         showMenu = false;
     }
 }

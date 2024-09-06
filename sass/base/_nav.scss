@@ -32,42 +32,44 @@ header {
   align-self: center;
   cursor: pointer;
 
-  .menu-btn_burger {
+  &_burger {
     right: 1rem;
     @include hamburger(2rem);
-  }
-  .menu-btn_burger::before {
-    content: "";
-    @include hamburger(-10px);
-  }
-  .menu-btn_burger::after {
-    content: "";
-    @include hamburger(10px);
-  }
 
-  .menu-btn_burger.open {
-    -webkit-transform: rotate(720deg);
-    transform: rotate(720deg);
-    background-color: transparent;
+    &::before {
+      content: "";
+      @include hamburger(-10px);
+    }
+    &::after {
+      content: "";
+      @include hamburger(10px);
+    }
+
+    &.open {
+      -webkit-transform: rotate(720deg);
+      transform: rotate(720deg);
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(8px, 6px);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(8px, -7px);
+        width: 2rem;
+      }
+    }
   }
-  .menu-btn_burger.open::before {
-    transform: rotate(45deg) translate(8px, 6px);
-  }
-  .menu-btn_burger.open::after {
-    transform: rotate(-45deg) translate(8px, -7px);
-    width: 2rem;
+  @include media-md {
+    visibility: visible;
   }
 }
 
-li .menu-nav_item.active > a {
-  color: $color-accent;
+.nav {
+  display: flex; // Inline on larger screens
+  flex-direction: row;
+  justify-content: flex-end;
 }
-ul a:hover,
-.social-icons a:hover {
-  color: $color-accent;
-  transition: all 0.4s ease-in-out;
-}
-// This is to hidde the watermark for lottieLab...
+
 .mask {
   position: relative;
   top: 27px;
@@ -79,11 +81,33 @@ ul a:hover,
   z-index: 300;
 }
 
-@media only screen and (max-width: 45em) {
+@include media-md {
   .menu-btn {
     visibility: visible;
   }
-  header .menu-nav {
+  .nav {
     display: none;
+    .menu-nav {
+      flex-direction: column;
+      position: absolute;
+      top: 4rem;
+      right: 0.5rem;
+      background-color: transparent;
+      color: $color-secondary;
+      width: 20%;
+      height: 20%;
+      z-index: 200;
+      gap: 1rem;
+      padding: 1;
+    }
+    &.open {
+      display: flex;
+      .menu-nav_item a {
+        color: $color-secondary;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
   }
 }
