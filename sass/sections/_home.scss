@@ -1,0 +1,198 @@
+@keyframes changeText {
+  0% {
+    content: "Bonjour";
+  }
+  50% {
+    content: "Kia Ora";
+  }
+}
+
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+#home {
+  @include media-md {
+    margin-top: 6rem;
+  }
+  @include media-xsm {
+    margin-top: 0;
+  }
+}
+.col-10.col-md-8 {
+  position: relative;
+  margin: 0;
+  display: flex;
+  height: 45vh;
+  @include media-md {
+    height: 60vh;
+  }
+}
+
+.animated-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 45vh;
+
+  @include media-md {
+    height: 60vh;
+  }
+  & > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+    & div {
+      //   padding: 2vmin 0;
+      position: absolute;
+      overflow: hidden;
+      padding: 5%;
+      &.top {
+        display: inline-flex;
+        flex-direction: column;
+        left: 0;
+      }
+      &.bottom {
+        display: inline-flex;
+        flex-direction: column;
+        right: 0;
+      }
+    }
+    & span {
+      display: block;
+    }
+  }
+  & > div.text-top {
+    top: 0;
+
+    & div {
+      animation: showTopText 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      bottom: 0;
+
+      transform: translate(0, 100%);
+    }
+    & span {
+      display: block;
+      text-align: left;
+    }
+    & span:first-child {
+      // This is the first span element in the div: Bonjour Kia Ora.
+      color: $color-accent;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+    }
+    & span:nth-child(2) {
+      // This is the second span element in the div: I'm
+      color: $color-secondary;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding-bottom: 0.5rem;
+    }
+    & span:last-child {
+      //My name is here.
+
+      color: $color-secondary;
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      margin-bottom: 0.5rem;
+      @include media-md {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  & > div.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 0.7vmin;
+    background-color: $color-secondary;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  & > div.text-bottom {
+    bottom: 0;
+
+    & div {
+      animation: showBottomText 0.5s;
+      animation-delay: 1.75s;
+      animation-fill-mode: forwards;
+      top: 0;
+      transform: translate(0, -100%);
+    }
+    & span {
+      color: $color-secondary;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1px;
+      text-align: right;
+    }
+    & span:first-child {
+      //the welcome message
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      @include media-md {
+        margin-top: 1rem;
+      }
+    }
+    & span:nth-child(2) {
+      //to my digital space...
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    & span:last-child {
+      //Web and software developer
+      color: $color-accent;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// PROFILE PICURE:
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid $color-secondary;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  @include media-md {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.animated-title > div.text-top div .greeting::after {
+  content: "Bonjour";
+  animation: changeText 4s infinite;
+}

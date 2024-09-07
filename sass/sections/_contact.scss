@@ -1,0 +1,7 @@
+#contact {
+  & > div.container {
+    & h2 {
+      @include sectionTitle;
+    }
+  }
+}
