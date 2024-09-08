@@ -12,6 +12,10 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 3rem, 5rem, 90px, auto;
   gap: 1rem;
+  @include media-lg {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
 }
 .skill-1 {
   @include skill(1);

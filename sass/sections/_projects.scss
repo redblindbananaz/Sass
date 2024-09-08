@@ -1,1 +1,12 @@
-
+#projects {
+  & > div.container {
+    & > div.project {
+      margin-bottom: 30px;
+      & h3 {
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+}

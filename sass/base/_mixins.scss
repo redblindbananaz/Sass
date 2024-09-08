@@ -67,8 +67,14 @@
   .circular-chart {
     display: block;
     margin: 10px auto;
-    max-width: 80%;
+    max-width: 60%;
     max-height: 250px;
+    @include media-md {
+      max-width: 20%;
+    }
+    @include media-lg {
+      max-width: 40%;
+    }
   }
 
   .circle-bg {
@@ -105,22 +111,36 @@
 
 @mixin skill($columnNumber) {
   grid-column: $columnNumber;
+  @include media-lg {
+    grid-column: span 4;
+    grid-row: $columnNumber;
+  }
   & > div.skill-name-logo {
     img {
       grid-row: 1;
+      @include media-lg {
+        grid-column: 1;
+      }
       &.skill-logo {
         margin-top: 3rem;
         margin-bottom: 2rem;
         margin-left: auto;
         margin-right: auto;
         @include alignCenter;
-        width: fit-content;
+        width: min-content;
         height: 3rem;
+        @include media-lg {
+          width: min-content;
+          height: 7rem;
+        }
       }
     }
   }
   & > div.single-chart {
     grid-row: 2;
+    @include media-lg {
+      grid-column: 2;
+    }
     @include circle;
   }
   & > p {
@@ -128,16 +148,29 @@
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: underline;
-    color: $color-lighterPrime;
+    color: $color-accent;
     text-align: center;
     padding-bottom: 2rem;
+    @include media-lg {
+      grid-column: 3;
+    }
   }
   & > div.Framwork {
     grid-row: 4;
-    margin: 1rem;
-    line-height: 1.3;
+
+    line-height: 1.5;
     font-size: 1rem;
+    line-break: strict;
     font-weight: 400;
+    @include media-lg {
+      grid-column: 4;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid $color-lighterPrime;
+    }
   }
 }
 
