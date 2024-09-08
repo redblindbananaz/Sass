@@ -1,7 +1,13 @@
+html {
+  p {
+    @include p($color-secondary);
+  }
+  .container h2 {
+    @include sectionTitle;
+  }
+}
+
 body {
   @include bg-color($color-primary);
   @include text($color-secondary);
-  & p {
-    line-height: 1.5;
-  }
 }

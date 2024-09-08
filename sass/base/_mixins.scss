@@ -4,11 +4,37 @@
   background-color: $color;
 }
 
+@mixin alignCenter() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 @mixin text($color) {
   color: $color;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@mixin p($color) {
+  @include text($color);
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@mixin card() {
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 @mixin sectionTitle() {
@@ -83,10 +109,8 @@
         margin-bottom: 2rem;
         margin-left: auto;
         margin-right: auto;
+        @include alignCenter;
         width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 3rem;
       }
     }
@@ -102,9 +126,6 @@
     text-decoration: underline;
     color: $color-lighterPrime;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 2rem;
   }
   & > div.Framwork {
@@ -118,6 +139,12 @@
 
 @mixin media-xsm {
   @media screen and (max-width: 376px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 700px) {
     @content;
   }
 }
