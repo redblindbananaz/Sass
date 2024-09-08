@@ -3,7 +3,7 @@
   & > div.container {
     & form {
       @include card;
-
+      background: $color-lighterPrime;
       & > div.form-group {
         max-width: 800px;
         margin: 0 auto;
@@ -18,7 +18,7 @@
             margin-top: 0;
           }
           & label {
-            @include p($color-secondary);
+            @include p($color-primary);
 
             padding: 1rem 1rem 1rem 0;
           }
@@ -45,6 +45,13 @@
           & textarea {
             height: 10rem;
           }
+          & input,
+          textarea {
+            &:focus {
+              outline: none;
+              border: 3px solid $color-primary;
+            }
+          }
         }
         & > div {
           flex: 0 0 25%;
@@ -69,6 +76,7 @@
           &:hover {
             border: 1px solid $color-accent;
             color: $color-accent;
+            background-color: $color-primary;
           }
           @include media-sm {
             flex: 0 0 100%;

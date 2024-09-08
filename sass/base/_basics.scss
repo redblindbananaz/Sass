@@ -12,4 +12,5 @@ html {
 body {
   @include bg-color($color-primary);
   @include text($color-secondary);
+  scroll-behavior: smooth;
 }

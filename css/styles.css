@@ -354,6 +354,7 @@ body {
   background-color: #333333;
   color: #e5e5e5;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  scroll-behavior: smooth;
 }
 
 header {
@@ -368,7 +369,7 @@ header {
           justify-content: space-between;
   position: relative;
 }
-header .location {
+header > div.location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,15 +377,24 @@ header .location {
       align-self: center;
   position: absolute;
 }
-header .location p,
-header .location span {
+header > div.location > p,
+header > div.location span {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-left: 0.3rem;
 }
-header .location span {
-  color: #fedc00;
+header > div.location span {
   font-weight: 800;
+  color: #fedc00;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  line-height: 20px;
 }
 header .menu-nav {
   display: -webkit-box;
@@ -1538,6 +1548,7 @@ header .menu-nav {
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
   padding: 2rem;
+  background: #757171;
 }
 #contact > div.container form > div.form-group {
   max-width: 800px;
@@ -1564,7 +1575,7 @@ header .menu-nav {
   }
 }
 #contact > div.container form > div.form-group > div.col-label label {
-  color: #e5e5e5;
+  color: #333333;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-size: 1.3rem;
@@ -1604,6 +1615,11 @@ header .menu-nav {
 #contact > div.container form > div.form-group > div.col-input textarea {
   height: 10rem;
 }
+#contact > div.container form > div.form-group > div.col-input input:focus,
+#contact > div.container form > div.form-group > div.col-input textarea:focus {
+  outline: none;
+  border: 3px solid #333333;
+}
 #contact > div.container form > div.form-group > div {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
@@ -1637,6 +1653,7 @@ header .menu-nav {
 #contact > div.container form > div.form-group button:hover {
   border: 1px solid #fedc00;
   color: #fedc00;
+  background-color: #333333;
 }
 @media screen and (max-width: 700px) {
   #contact > div.container form > div.form-group button {

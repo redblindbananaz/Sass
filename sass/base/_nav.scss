@@ -6,18 +6,19 @@ header {
   justify-content: space-between;
   position: relative;
 
-  .location {
+  & > div.location {
     display: flex;
     align-self: center;
     position: absolute;
-    p,
+    & > p,
     span {
       align-content: center;
       padding-left: 0.3rem;
     }
     span {
-      color: $color-accent;
       font-weight: 800;
+      @include p($color-accent);
+      line-height: 20px;
     }
   }
   .menu-nav {
