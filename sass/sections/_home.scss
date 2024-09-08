@@ -135,7 +135,7 @@
     width: 90%;
     height: 0.7vmin;
     background-color: $color-secondary;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    @include shadow;
   }
   & > div.text-bottom {
     bottom: 0;

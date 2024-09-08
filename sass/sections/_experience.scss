@@ -1,1 +1,179 @@
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: $color-accent;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    z-index: -2;
+    @include media-md {
+      left: 0;
+    }
+  }
+  & > div.container {
+    padding: 15px 30px;
+    position: relative;
+    width: 50%;
+    @include media-md {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+    &.left {
+      left: -50%;
+      transform: translateX(50%);
+    }
+    &.right {
+      left: 50%;
+      transform: translateX(-50%);
+      @include media-md {
+        left: 50%;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: calc(50% - 8px);
+      right: -8px;
+      background-color: $color-primary;
+      border: 2px solid $color-accent;
+      border-radius: 16px;
+      z-index: 1;
+    }
+    &.right::after {
+      left: -8px;
+      @include media-md {
+        left: -8px;
+      }
+    }
+    &.left::after {
+      @include media-md {
+        left: -8px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      top: calc(50% - 1px);
+      right: 8px;
+      background-color: $color-accent;
+      z-index: 1;
+    }
+    &.right::before {
+      left: 8px;
+      @include media-md {
+        left: 10px;
+      }
+    }
+    &.left::before {
+      @include media-md {
+        left: 10px;
+      }
+    }
+    & > div.date {
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 8px);
+      text-align: center;
+      font-size: 1.2rem;
+      color: $color-accent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 1;
+    }
+    &.left > div.date {
+      right: -75px;
+      transform: translateX(75px);
+      @include media-md {
+        transform: none;
+        top: -10px;
+        position: relative;
+        left: 40%;
+      }
+    }
+
+    &.right > div.date {
+      left: -25px;
+      transform: translateX(-125px);
+      @include media-md {
+        transform: none;
+
+        position: relative;
+        left: 40%;
+        top: -10px;
+      }
+    }
+
+    & > i.fa-solid {
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 9px 0;
+      top: calc(50% - 20px);
+      background: $color-primary;
+      border-radius: 40px;
+      border: 2px solid $color-accent;
+      text-align: center;
+      font-size: 18px;
+      color: $color-accent;
+      z-index: 1;
+    }
+    &.left > i.fa-solid {
+      right: 56px;
+      @include media-md {
+        left: 46px;
+      }
+    }
+
+    &.right > i.fa-solid {
+      left: 56px;
+      @include media-md {
+        left: 46px;
+      }
+    }
+    & > div.content {
+      padding: 30px 90px 30px 30px;
+      background: $color-lighterPrime;
+      position: relative;
+      border-radius: 0 500px 500px 0;
+      @include shadow;
+      @include media-md {
+        padding: 30px 30px 30px 90px;
+        border-radius: 500px 0 0 500px;
+        min-height: 10rem;
+      }
+
+      & > h3 {
+        margin: 0 0 10px 0;
+        font-size: 19px;
+        letter-spacing: 1.3px;
+        font-weight: bold;
+        color: $color-primary;
+      }
+      & > p {
+        margin: 0;
+        font-size: 18px;
+        color: $color-secondary;
+        line-height: 22px;
+      }
+    }
+    &.right > div.content {
+      padding: 30px 30px 30px 90px;
+      border-radius: 500px 0 0 500px;
+    }
+  }
+}

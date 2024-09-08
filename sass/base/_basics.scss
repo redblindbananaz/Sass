@@ -4,6 +4,8 @@ html {
   }
   .container h2 {
     @include sectionTitle;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
 }
 
