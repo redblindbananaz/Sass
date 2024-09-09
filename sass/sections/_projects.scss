@@ -1,11 +1,59 @@
 #projects {
   & > div.container {
-    & > div.project {
-      margin-bottom: 30px;
-      & h3 {
-        font-size: 2rem;
-        margin-bottom: 5rem;
-        margin-top: 5rem;
+    & > div.slide-container {
+      @include alignCenter;
+      & > div.slide-card {
+        @include card;
+        background-color: $color-lighterPrime;
+        width: 100%;
+        & h3 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 3rem;
+          margin-top: 1rem;
+          text-align: center;
+          color: $color-primary;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+          opacity: 0.9;
+          object-fit: cover;
+          margin-bottom: 2rem;
+          @include shadow;
+        }
+        & > div.slide-card_content {
+          & > div.viewBtn {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            margin: 2rem auto;
+            width: 40%;
+            gap: 1rem;
+            border-radius: 1rem;
+            border: 1px solid $color-accent;
+            background-color: $color-primary;
+            color: $color-accent;
+            @include shadow;
+            &:hover {
+              color: $color-secondary;
+              border: 1px solid $color-secondary;
+              & > a {
+                color: $color-secondary;
+              }
+            }
+            & > a {
+              color: $color-accent;
+              text-decoration: none;
+              font-size: 1.5rem;
+              font-weight: 600;
+              letter-spacing: 1px;
+            }
+            & > i {
+              font-size: 1.5rem;
+            }
+          }
+        }
       }
     }
   }

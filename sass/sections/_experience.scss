@@ -15,7 +15,7 @@
     left: 50%;
     margin-left: -1px;
     z-index: -2;
-    @include media-md {
+    @include media-lg {
       left: 0;
     }
   }
@@ -23,7 +23,7 @@
     padding: 15px 30px;
     position: relative;
     width: 50%;
-    @include media-md {
+    @include media-lg {
       width: 100%;
       padding-left: 30px;
       padding-right: 10px;
@@ -35,7 +35,7 @@
     &.right {
       left: 50%;
       transform: translateX(-50%);
-      @include media-md {
+      @include media-lg {
         left: 50%;
       }
     }
@@ -53,12 +53,12 @@
     }
     &.right::after {
       left: -8px;
-      @include media-md {
+      @include media-lg {
         left: -8px;
       }
     }
     &.left::after {
-      @include media-md {
+      @include media-lg {
         left: -8px;
       }
     }
@@ -74,12 +74,12 @@
     }
     &.right::before {
       left: 8px;
-      @include media-md {
+      @include media-lg {
         left: 10px;
       }
     }
     &.left::before {
-      @include media-md {
+      @include media-lg {
         left: 10px;
       }
     }
@@ -97,7 +97,7 @@
     &.left > div.date {
       right: -75px;
       transform: translateX(75px);
-      @include media-md {
+      @include media-lg {
         transform: none;
         top: -10px;
         position: relative;
@@ -108,7 +108,7 @@
     &.right > div.date {
       left: -25px;
       transform: translateX(-125px);
-      @include media-md {
+      @include media-lg {
         transform: none;
 
         position: relative;
@@ -134,14 +134,14 @@
     }
     &.left > i.fa-solid {
       right: 56px;
-      @include media-md {
+      @include media-lg {
         left: 46px;
       }
     }
 
     &.right > i.fa-solid {
       left: 56px;
-      @include media-md {
+      @include media-lg {
         left: 46px;
       }
     }
@@ -151,7 +151,7 @@
       position: relative;
       border-radius: 0 500px 500px 0;
       @include shadow;
-      @include media-md {
+      @include media-lg {
         padding: 30px 30px 30px 90px;
         border-radius: 500px 0 0 500px;
         min-height: 10rem;
@@ -166,9 +166,10 @@
       }
       & > p {
         margin: 0;
-        font-size: 18px;
-        color: $color-secondary;
-        line-height: 22px;
+        @include p($color-secondary);
+        // font-size: 18px;
+        // color: $color-secondary;
+        // line-height: 22px;
       }
     }
     &.right > div.content {
