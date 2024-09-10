@@ -1932,23 +1932,16 @@ header .menu-nav {
   border-radius: 500px 0 0 500px;
 }
 
-#projects > div.container > div.slide-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+#projects {
+  /* The dots/bullets/indicators */
 }
-#projects > div.container > div.slide-container > div.slide-card {
+#projects > div.container > div.slide-containered {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#projects > div.container > div.slide-containered > div.slide-card {
+  display: block;
   border-radius: 24px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -1957,7 +1950,7 @@ header .menu-nav {
   background-color: #757171;
   width: 100%;
 }
-#projects > div.container > div.slide-container > div.slide-card h3 {
+#projects > div.container > div.slide-containered > div.slide-card h3 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
@@ -1965,7 +1958,19 @@ header .menu-nav {
   text-align: center;
   color: #333333;
 }
-#projects > div.container > div.slide-container > div.slide-card img {
+@media screen and (max-width: 768px) {
+  #projects > div.container > div.slide-containered > div.slide-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #projects > div.container > div.slide-containered > div.slide-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+#projects > div.container > div.slide-containered > div.slide-card img {
   width: 100%;
   height: 100%;
   opacity: 0.9;
@@ -1975,7 +1980,7 @@ header .menu-nav {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-#projects > div.container > div.slide-container > div.slide-card > div.slide-card_content > div.viewBtn {
+#projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1984,7 +1989,7 @@ header .menu-nav {
           justify-content: center;
   padding: 1rem;
   margin: 2rem auto;
-  width: 40%;
+  min-width: 90%;
   gap: 1rem;
   border-radius: 1rem;
   border: 1px solid #fedc00;
@@ -1993,22 +1998,77 @@ header .menu-nav {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-#projects > div.container > div.slide-container > div.slide-card > div.slide-card_content > div.viewBtn:hover {
+#projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn:hover {
   color: #e5e5e5;
   border: 1px solid #e5e5e5;
 }
-#projects > div.container > div.slide-container > div.slide-card > div.slide-card_content > div.viewBtn:hover > a {
+#projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn:hover > a {
   color: #e5e5e5;
 }
-#projects > div.container > div.slide-container > div.slide-card > div.slide-card_content > div.viewBtn > a {
+#projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn > a {
   color: #fedc00;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
-#projects > div.container > div.slide-container > div.slide-card > div.slide-card_content > div.viewBtn > i {
+#projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn > i {
   font-size: 1.5rem;
+}
+#projects > div.container > div.slide-containered > div.arrows {
+  position: absolute;
+  bottom: -3.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#projects > div.container > div.slide-containered > div.arrows > a {
+  cursor: pointer;
+  background-color: #333333;
+  color: #fedc00;
+  border: 2px solid #fedc00;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+#projects > div.container > div.slide-containered > div.arrows > a:hover {
+  background-color: #fedc00;
+  color: #333333;
+}
+#projects span.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+#projects span.dot:hover {
+  background-color: #fedc00;
+}
+#projects span.dot.active {
+  background-color: #fedc00;
 }
 
 #contact {
