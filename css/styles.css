@@ -812,50 +812,61 @@ header .menu-nav {
           animation: changeText 4s infinite;
 }
 
-#about .container {
-  padding: 2rem;
+#about > div.container > div.skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-
-.skills-container {
+#about > div.container > div.skills-box > div.skill {
   border-radius: 24px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
   padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3rem, 5rem, 90px, auto;
-  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-flex: 1 1 1;
+      -ms-flex-positive: 1 1 1;
+          flex-grow: 1 1 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@media screen and (max-width: 992px) {
-  .skills-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
+@media screen and (max-width: 376px) {
+  #about > div.container > div.skills-box > div.skill {
+    padding: 0/5rem;
+    margin: 0.5rem auto;
   }
 }
-
-.skill-1 {
-  grid-column: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-1 {
-    grid-column: span 4;
-    grid-row: 1;
+@media screen and (max-width: 576px) {
+  #about > div.container > div.skills-box > div.skill {
+    padding: 1rem;
+    margin: 1rem auto;
   }
 }
-.skill-1 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-1 > div.skill-name-logo img {
-    grid-column: 1;
+@media screen and (max-width: 768px) {
+  #about > div.container > div.skills-box > div.skill {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
   }
 }
-.skill-1 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+#about > div.container > div.skills-box > div.skill > div.skill-name-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,55 +881,81 @@ header .menu-nav {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
+  width: 50%;
 }
-@media screen and (max-width: 992px) {
-  .skill-1 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
+#about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+  max-height: 12rem;
+  width: auto;
+}
+@media screen and (max-width: 376px) {
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+    max-height: 1rem;
+    max-width: 6rem;
   }
 }
-.skill-1 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-1 > div.single-chart {
-    grid-column: 2;
+@media screen and (max-width: 576px) {
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+    max-height: 4rem;
   }
-}
-.skill-1 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-1 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
 }
 @media screen and (max-width: 768px) {
-  .skill-1 > div.single-chart .circular-chart {
-    max-width: 25%;
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+    max-height: 6rem;
   }
 }
 @media screen and (max-width: 992px) {
-  .skill-1 > div.single-chart .circular-chart {
-    max-width: 20%;
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+    max-height: 6rem;
   }
 }
-.skill-1 > div.single-chart .circle-bg {
+@media screen and (max-width: 1200px) {
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
+    max-height: 9rem;
+  }
+}
+#about > div.container > div.skills-box > div.skill > div.skill-name-logo p {
+  font-size: 1.7rem;
+}
+#about > div.container > div.skills-box > div.skill > div.single-chart {
+  width: 50%;
+}
+#about > div.container > div.skills-box > div.skill > div.single-chart .single-chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+#about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
+  margin: 2rem;
+  max-height: 230px;
+}
+@media screen and (max-width: 376px) {
+  #about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  #about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
+    margin: 0.5rem;
+  }
+}
+#about > div.container > div.skills-box > div.skill > div.single-chart .circle-bg {
   fill: none;
   stroke: #757171;
   stroke-linecap: round;
   stroke-width: 3.8;
 }
-.skill-1 > div.single-chart .circle {
+#about > div.container > div.skills-box > div.skill > div.single-chart .circle {
   fill: none;
   stroke-width: 2.8;
   stroke-linecap: round;
@@ -935,786 +972,92 @@ header .menu-nav {
     stroke-dasharray: 0 100;
   }
 }
-.skill-1 > div.single-chart .circular-chart .circle {
+#about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart .circle {
   stroke: #fedc00;
 }
-.skill-1 > div.single-chart .percentage {
+#about > div.container > div.skills-box > div.skill > div.single-chart .percentage {
   fill: #e5e5e5;
   font-family: sans-serif;
   font-size: 0.4em;
   text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   text-anchor: middle;
 }
-.skill-1 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
+#about > div.container > div.skills-box > div.skill > div.Framwork {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #757171;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-@media screen and (max-width: 992px) {
-  .skill-1 > p {
-    grid-column: 3;
+#about > div.container > div.skills-box > div.skill > div.Framwork > li {
+  padding-right: 1rem;
+  text-decoration: none;
+  list-style: circle;
+  color: #e5e5e5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+@media screen and (max-width: 768px) {
+  #about > div.container > div.skills-box > div.skill > div.Framwork > li {
+    font-size: 1.1rem;
   }
 }
-.skill-1 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-1 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
+@media screen and (max-width: 576px) {
+  #about > div.container > div.skills-box > div.skill > div.Framwork > li {
+    font-size: 1rem;
   }
 }
 
+/*
+.skills-container {
+  @include card;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 3rem, 5rem, 90px, auto;
+  gap: 1rem;
+  @include media-lg {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+.skill-1 {
+  @include skill(1);
+}
 .skill-2 {
-  grid-column: 2;
+  @include skill(2);
 }
-@media screen and (max-width: 992px) {
-  .skill-2 {
-    grid-column: span 4;
-    grid-row: 2;
-  }
-}
-.skill-2 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > div.skill-name-logo img {
-    grid-column: 1;
-  }
-}
-.skill-2 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
-  }
-}
-.skill-2 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > div.single-chart {
-    grid-column: 2;
-  }
-}
-.skill-2 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-2 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
-}
-@media screen and (max-width: 768px) {
-  .skill-2 > div.single-chart .circular-chart {
-    max-width: 25%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > div.single-chart .circular-chart {
-    max-width: 20%;
-  }
-}
-.skill-2 > div.single-chart .circle-bg {
-  fill: none;
-  stroke: #757171;
-  stroke-linecap: round;
-  stroke-width: 3.8;
-}
-.skill-2 > div.single-chart .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.skill-2 > div.single-chart .circular-chart .circle {
-  stroke: #fedc00;
-}
-.skill-2 > div.single-chart .percentage {
-  fill: #e5e5e5;
-  font-family: sans-serif;
-  font-size: 0.4em;
-  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-  text-anchor: middle;
-}
-.skill-2 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > p {
-    grid-column: 3;
-  }
-}
-.skill-2 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-2 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
-  }
-}
-
 .skill-3 {
-  grid-column: 3;
+  @include skill(3);
 }
-@media screen and (max-width: 992px) {
-  .skill-3 {
-    grid-column: span 4;
-    grid-row: 3;
-  }
-}
-.skill-3 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > div.skill-name-logo img {
-    grid-column: 1;
-  }
-}
-.skill-3 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
-  }
-}
-.skill-3 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > div.single-chart {
-    grid-column: 2;
-  }
-}
-.skill-3 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-3 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
-}
-@media screen and (max-width: 768px) {
-  .skill-3 > div.single-chart .circular-chart {
-    max-width: 25%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > div.single-chart .circular-chart {
-    max-width: 20%;
-  }
-}
-.skill-3 > div.single-chart .circle-bg {
-  fill: none;
-  stroke: #757171;
-  stroke-linecap: round;
-  stroke-width: 3.8;
-}
-.skill-3 > div.single-chart .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.skill-3 > div.single-chart .circular-chart .circle {
-  stroke: #fedc00;
-}
-.skill-3 > div.single-chart .percentage {
-  fill: #e5e5e5;
-  font-family: sans-serif;
-  font-size: 0.4em;
-  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-  text-anchor: middle;
-}
-.skill-3 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > p {
-    grid-column: 3;
-  }
-}
-.skill-3 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-3 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
-  }
-}
-
 .skill-4 {
-  grid-column: 4;
+  @include skill(4);
 }
-@media screen and (max-width: 992px) {
-  .skill-4 {
-    grid-column: span 4;
-    grid-row: 4;
-  }
-}
-.skill-4 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > div.skill-name-logo img {
-    grid-column: 1;
-  }
-}
-.skill-4 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
-  }
-}
-.skill-4 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > div.single-chart {
-    grid-column: 2;
-  }
-}
-.skill-4 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-4 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
-}
-@media screen and (max-width: 768px) {
-  .skill-4 > div.single-chart .circular-chart {
-    max-width: 25%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > div.single-chart .circular-chart {
-    max-width: 20%;
-  }
-}
-.skill-4 > div.single-chart .circle-bg {
-  fill: none;
-  stroke: #757171;
-  stroke-linecap: round;
-  stroke-width: 3.8;
-}
-.skill-4 > div.single-chart .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.skill-4 > div.single-chart .circular-chart .circle {
-  stroke: #fedc00;
-}
-.skill-4 > div.single-chart .percentage {
-  fill: #e5e5e5;
-  font-family: sans-serif;
-  font-size: 0.4em;
-  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-  text-anchor: middle;
-}
-.skill-4 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > p {
-    grid-column: 3;
-  }
-}
-.skill-4 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-4 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
-  }
-}
-
 .skill-5 {
-  grid-column: 5;
+  @include skill(5);
 }
-@media screen and (max-width: 992px) {
-  .skill-5 {
-    grid-column: span 4;
-    grid-row: 5;
-  }
-}
-.skill-5 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > div.skill-name-logo img {
-    grid-column: 1;
-  }
-}
-.skill-5 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
-  }
-}
-.skill-5 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > div.single-chart {
-    grid-column: 2;
-  }
-}
-.skill-5 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-5 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
-}
-@media screen and (max-width: 768px) {
-  .skill-5 > div.single-chart .circular-chart {
-    max-width: 25%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > div.single-chart .circular-chart {
-    max-width: 20%;
-  }
-}
-.skill-5 > div.single-chart .circle-bg {
-  fill: none;
-  stroke: #757171;
-  stroke-linecap: round;
-  stroke-width: 3.8;
-}
-.skill-5 > div.single-chart .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.skill-5 > div.single-chart .circular-chart .circle {
-  stroke: #fedc00;
-}
-.skill-5 > div.single-chart .percentage {
-  fill: #e5e5e5;
-  font-family: sans-serif;
-  font-size: 0.4em;
-  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-  text-anchor: middle;
-}
-.skill-5 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > p {
-    grid-column: 3;
-  }
-}
-.skill-5 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-5 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
-  }
-}
-
 .skill-6 {
-  grid-column: 6;
+  @include skill(6);
 }
-@media screen and (max-width: 992px) {
-  .skill-6 {
-    grid-column: span 4;
-    grid-row: 6;
-  }
-}
-.skill-6 > div.skill-name-logo img {
-  grid-row: 1;
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > div.skill-name-logo img {
-    grid-column: 1;
-  }
-}
-.skill-6 > div.skill-name-logo img.skill-logo {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: 3rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > div.skill-name-logo img.skill-logo {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 7rem;
-  }
-}
-.skill-6 > div.single-chart {
-  grid-row: 2;
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > div.single-chart {
-    grid-column: 2;
-  }
-}
-.skill-6 > div.single-chart .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.skill-6 > div.single-chart .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 70%;
-  max-height: 250px;
-}
-@media screen and (max-width: 768px) {
-  .skill-6 > div.single-chart .circular-chart {
-    max-width: 25%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > div.single-chart .circular-chart {
-    max-width: 20%;
-  }
-}
-.skill-6 > div.single-chart .circle-bg {
-  fill: none;
-  stroke: #757171;
-  stroke-linecap: round;
-  stroke-width: 3.8;
-}
-.skill-6 > div.single-chart .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 1s ease-out forwards;
-          animation: progress 1s ease-out forwards;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.skill-6 > div.single-chart .circular-chart .circle {
-  stroke: #fedc00;
-}
-.skill-6 > div.single-chart .percentage {
-  fill: #e5e5e5;
-  font-family: sans-serif;
-  font-size: 0.4em;
-  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-  text-anchor: middle;
-}
-.skill-6 > p {
-  grid-row: 3;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fedc00;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > p {
-    grid-column: 3;
-  }
-}
-.skill-6 > div.Framwork {
-  grid-row: 4;
-  line-height: 1.5;
-  font-size: 1rem;
-  line-break: strict;
-  font-weight: 400;
-}
-@media screen and (max-width: 992px) {
-  .skill-6 > div.Framwork {
-    grid-column: 4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #757171;
-  }
-}
-
+  */
 .timeline {
   position: relative;
   width: 100%;
@@ -1950,6 +1293,24 @@ header .menu-nav {
   background-color: #757171;
   width: 100%;
 }
+@media screen and (max-width: 376px) {
+  #projects > div.container > div.slide-containered > div.slide-card {
+    padding: 0/5rem;
+    margin: 0.5rem auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #projects > div.container > div.slide-containered > div.slide-card {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #projects > div.container > div.slide-containered > div.slide-card {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+}
 #projects > div.container > div.slide-containered > div.slide-card h3 {
   font-size: 3rem;
   font-weight: 700;
@@ -2082,6 +1443,24 @@ header .menu-nav {
   margin: 2rem auto;
   padding: 2rem;
   background: #757171;
+}
+@media screen and (max-width: 376px) {
+  #contact > div.container form {
+    padding: 0/5rem;
+    margin: 0.5rem auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #contact > div.container form {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #contact > div.container form {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
 }
 #contact > div.container form > div.form-group {
   max-width: 800px;

@@ -1,11 +1,75 @@
 #about {
-  .container {
-    padding: 2rem;
+  & > div.container {
+    & > div.skills-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-direction: column;
+
+      & > div.skill {
+        @include card;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-grow: 1 1 1;
+        justify-content: space-evenly;
+        flex-direction: row;
+        & > div.skill-name-logo {
+          @include alignCenter;
+          width: 50%;
+          img {
+            max-height: 12rem;
+            width: auto;
+            @include media-xsm {
+              max-height: 1rem;
+              max-width: 6rem;
+            }
+            @include media-sm {
+              max-height: 4rem;
+            }
+            @include media-md {
+              max-height: 6rem;
+            }
+            @include media-lg {
+              max-height: 6rem;
+            }
+            @include media-xl {
+              max-height: 9rem;
+            }
+          }
+          p {
+            font-size: 1.7rem;
+          }
+        }
+        & > div.single-chart {
+          width: 50%;
+          @include circle;
+        }
+        & > div.Framwork {
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 1px solid $color-lighterPrime;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          & > li {
+            padding-right: 1rem;
+            text-decoration: none;
+            list-style: circle;
+            @include p($color-secondary);
+          }
+        }
+      }
+    }
   }
 }
 
-// grid for skills
+// Flexcards for the skills:
 
+// grid for skills
+/*
 .skills-container {
   @include card;
   display: grid;
@@ -35,3 +99,4 @@
 .skill-6 {
   @include skill(6);
 }
+  */
