@@ -345,12 +345,13 @@ html p {
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
   html p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
   }
 }
 html .container h2 {
-  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 2.5px;
   margin-bottom: 2rem;
@@ -359,12 +360,12 @@ html .container h2 {
   margin-bottom: 5rem;
   margin-top: 5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
   html .container h2 {
     font-size: 2.5rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   html .container h2 {
     font-size: 2rem;
   }
@@ -421,8 +422,10 @@ header > div.location span {
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
   header > div.location span {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
   }
 }
 header .menu-nav {
@@ -450,8 +453,10 @@ header .menu-nav > li a {
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
   header .menu-nav > li a {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
   }
 }
 header .menu-nav > li a:hover {
@@ -575,6 +580,14 @@ header .menu-nav > li a.active {
     gap: 1rem;
     padding: 2rem;
   }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) and (min-width: 300px) and (max-width: 992px) {
+  .nav .menu-nav {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .nav .menu-nav.open {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -774,6 +787,12 @@ header .menu-nav > li a.active {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  .animated-title > div.line {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
 .animated-title > div.text-bottom {
   bottom: 0;
 }
@@ -841,60 +860,60 @@ header .menu-nav > li a.active {
 }
 
 #about > div.container > div.skills-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-#about > div.container > div.skills-box > div.skill {
   border-radius: 24px;
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-flex: 1 1 1;
-      -ms-flex-positive: 1 1 1;
-          flex-grow: 1 1 1;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  gap: 10rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media screen and (min-width: 376px) {
-  #about > div.container > div.skills-box > div.skill {
-    padding: 0/5rem;
-    margin: 0.5rem auto;
-  }
-}
-@media screen and (min-width: 576px) {
-  #about > div.container > div.skills-box > div.skill {
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box {
     padding: 1rem;
-    margin: 1rem auto;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 }
-@media screen and (min-width: 768px) {
-  #about > div.container > div.skills-box > div.skill {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
+@media screen and (min-width: 300px) and (max-width: 992px) and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #about > div.container > div.skills-box {
+    padding: 2rem;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+#about > div.container > div.skills-box > div.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
 }
 #about > div.container > div.skills-box > div.skill > div.skill-name-logo {
+  width: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,43 +928,33 @@ header .menu-nav > li a.active {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  width: 50%;
 }
 #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-  max-height: 12rem;
-  width: auto;
+  max-height: 65px;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-    max-height: 1rem;
-    max-width: 6rem;
+    height: 3rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
   #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-    max-height: 4rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-    max-height: 6rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-    max-height: 6rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #about > div.container > div.skills-box > div.skill > div.skill-name-logo img {
-    max-height: 9rem;
+    height: 60px;
   }
 }
 #about > div.container > div.skills-box > div.skill > div.skill-name-logo p {
   font-size: 1.7rem;
 }
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box > div.skill > div.skill-name-logo p {
+    font-size: 1.2rem;
+  }
+}
 #about > div.container > div.skills-box > div.skill > div.single-chart {
-  width: 50%;
+  max-width: 10rem;
+  max-height: 10rem;
+  height: 300px;
+  width: 300px;
 }
 #about > div.container > div.skills-box > div.skill > div.single-chart .single-chart {
   display: -webkit-box;
@@ -962,20 +971,6 @@ header .menu-nav > li a.active {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-}
-#about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
-  margin: 2rem;
-  max-height: 230px;
-}
-@media screen and (min-width: 376px) {
-  #about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
-    margin: 0;
-  }
-}
-@media screen and (min-width: 576px) {
-  #about > div.container > div.skills-box > div.skill > div.single-chart .circular-chart {
-    margin: 0.5rem;
-  }
 }
 #about > div.container > div.skills-box > div.skill > div.single-chart .circle-bg {
   fill: none;
@@ -1010,27 +1005,45 @@ header .menu-nav > li a.active {
   text-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   text-anchor: middle;
 }
-#about > div.container > div.skills-box > div.skill > div.Framwork {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #757171;
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box > div.skill > div.single-chart {
+    width: 6rem;
+    height: 5rem;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #about > div.container > div.skills-box > div.skill > div.single-chart {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box > div.skill {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+}
+#about > div.container > div.skills-box > div.Framwork {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
-#about > div.container > div.skills-box > div.skill > div.Framwork > li {
+#about > div.container > div.skills-box > div.Framwork > li {
   padding-right: 1rem;
   text-decoration: none;
   list-style: circle;
@@ -1043,15 +1056,27 @@ header .menu-nav > li a.active {
   text-align: left;
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-  #about > div.container > div.skills-box > div.skill > div.Framwork > li {
+  #about > div.container > div.skills-box > div.Framwork > li {
     font-size: 1.3rem;
     line-height: 1.2;
   }
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
-  #about > div.container > div.skills-box > div.skill > div.Framwork > li {
-    font-size: 1rem;
-    line-height: 1.4;
+  #about > div.container > div.skills-box > div.Framwork > li {
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #about > div.container > div.skills-box > div.Framwork {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1104,7 +1129,7 @@ header .menu-nav > li a.active {
   margin-left: -1px;
   z-index: -2;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline::after {
     left: 0;
   }
@@ -1114,11 +1139,11 @@ header .menu-nav > li a.active {
   position: relative;
   width: 50%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container {
     width: 100%;
     padding-left: 30px;
-    padding-right: 10px;
+    padding-right: 0;
   }
 }
 .timeline > div.container.left {
@@ -1131,7 +1156,7 @@ header .menu-nav > li a.active {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.right {
     left: 50%;
   }
@@ -1151,12 +1176,12 @@ header .menu-nav > li a.active {
 .timeline > div.container.right::after {
   left: -8px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.right::after {
     left: -8px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.left::after {
     left: -8px;
   }
@@ -1174,12 +1199,12 @@ header .menu-nav > li a.active {
 .timeline > div.container.right::before {
   left: 8px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.right::before {
     left: 10px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.left::before {
     left: 10px;
   }
@@ -1200,7 +1225,7 @@ header .menu-nav > li a.active {
   -webkit-transform: translateX(75px);
           transform: translateX(75px);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.left > div.date {
     -webkit-transform: none;
             transform: none;
@@ -1214,7 +1239,7 @@ header .menu-nav > li a.active {
   -webkit-transform: translateX(-125px);
           transform: translateX(-125px);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.right > div.date {
     -webkit-transform: none;
             transform: none;
@@ -1241,7 +1266,7 @@ header .menu-nav > li a.active {
 .timeline > div.container.left > i.fa-solid {
   right: 56px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.left > i.fa-solid {
     left: 46px;
   }
@@ -1249,7 +1274,7 @@ header .menu-nav > li a.active {
 .timeline > div.container.right > i.fa-solid {
   left: 56px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container.right > i.fa-solid {
     left: 46px;
   }
@@ -1262,19 +1287,32 @@ header .menu-nav > li a.active {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container > div.content {
-    padding: 30px 30px 30px 90px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  .timeline > div.container > div.content {
+    padding: 20px 20px 20px 70px;
     border-radius: 500px 0 0 500px;
-    min-height: 10rem;
   }
 }
 .timeline > div.container > div.content > h3 {
   margin: 0 0 10px 0;
   font-size: 19px;
   letter-spacing: 1.3px;
-  font-weight: bold;
+  font-weight: 800;
   color: #333333;
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  .timeline > div.container > div.content > h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
 }
 .timeline > div.container > div.content > p {
   margin: 0;
@@ -1294,13 +1332,21 @@ header .menu-nav > li a.active {
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
   .timeline > div.container > div.content > p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
   }
 }
 .timeline > div.container.right > div.content {
   padding: 30px 30px 30px 90px;
   border-radius: 500px 0 0 500px;
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  .timeline > div.container.right > div.content {
+    padding: 20px 20px 20px 70px;
+    border-radius: 500px 0 0 500px;
+  }
 }
 
 #projects {
@@ -1314,48 +1360,55 @@ header .menu-nav > li a.active {
 #projects > div.container > div.slide-containered > div.slide-card {
   display: block;
   border-radius: 24px;
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
   padding: 2rem;
   background-color: #757171;
   width: 100%;
 }
-@media screen and (min-width: 376px) {
-  #projects > div.container > div.slide-containered > div.slide-card {
-    padding: 0/5rem;
-    margin: 0.5rem auto;
-  }
-}
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #projects > div.container > div.slide-containered > div.slide-card {
     padding: 1rem;
-    margin: 1rem auto;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 992px) and (min-width: 300px) and (max-width: 992px) {
   #projects > div.container > div.slide-containered > div.slide-card {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #projects > div.container > div.slide-containered > div.slide-card {
+    padding: 2rem;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) and (min-width: 300px) and (max-width: 992px) {
+  #projects > div.container > div.slide-containered > div.slide-card {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 }
 #projects > div.container > div.slide-containered > div.slide-card h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   margin-top: 1rem;
   text-align: center;
   color: #333333;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
   #projects > div.container > div.slide-containered > div.slide-card h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #projects > div.container > div.slide-containered > div.slide-card h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
   }
 }
@@ -1369,6 +1422,12 @@ header .menu-nav > li a.active {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #projects > div.container > div.slide-containered > div.slide-card img {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
 #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1376,9 +1435,13 @@ header .menu-nav > li a.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1rem;
-  margin: 2rem auto;
-  min-width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  width: 80%;
+  margin: 1rem auto;
+  min-width: 100px;
   gap: 1rem;
   border-radius: 1rem;
   border: 1px solid #fedc00;
@@ -1386,6 +1449,12 @@ header .menu-nav > li a.active {
   color: #fedc00;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
 }
 #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn:hover {
   color: #e5e5e5;
@@ -1397,12 +1466,18 @@ header .menu-nav > li a.active {
 #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn > a {
   color: #fedc00;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn > i {
-  font-size: 1.5rem;
+  vertical-align: middle;
+  font-size: 2rem;
+}
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #projects > div.container > div.slide-containered > div.slide-card > div.slide-card_content > div.viewBtn {
+    width: 60%;
+  }
 }
 #projects > div.container > div.slide-containered > div.arrows {
   position: absolute;
@@ -1438,6 +1513,12 @@ header .menu-nav > li a.active {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #projects > div.container > div.slide-containered > div.arrows > a {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
 #projects > div.container > div.slide-containered > div.arrows > a:hover {
   background-color: #fedc00;
   color: #333333;
@@ -1466,28 +1547,35 @@ header .menu-nav > li a.active {
 }
 #contact > div.container form {
   border-radius: 24px;
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
   padding: 2rem;
   background: #757171;
 }
-@media screen and (min-width: 376px) {
-  #contact > div.container form {
-    padding: 0/5rem;
-    margin: 0.5rem auto;
-  }
-}
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form {
     padding: 1rem;
-    margin: 1rem auto;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 992px) and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #contact > div.container form {
+    padding: 2rem;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) and (min-width: 300px) and (max-width: 992px) {
+  #contact > div.container form {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 }
 #contact > div.container form > div.form-group {
@@ -1532,8 +1620,10 @@ header .menu-nav > li a.active {
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form > div.form-group > div.col-label label {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
   }
 }
 #contact > div.container form > div.form-group > div.col-input {
