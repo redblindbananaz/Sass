@@ -10,6 +10,7 @@ header {
     display: flex;
     align-self: center;
     position: absolute;
+
     & > p,
     span {
       align-content: center;
@@ -27,7 +28,6 @@ header {
 
     & > li a {
       @include p($color-secondary);
-
       &:hover {
         color: $color-accent;
       }
@@ -35,7 +35,7 @@ header {
         color: $color-accent;
       }
     }
-    @include media-lg {
+    @include Mobile {
       gap: 1rem;
     }
   }
@@ -44,6 +44,7 @@ header {
   visibility: hidden;
   padding: 1rem;
   align-self: center;
+  z-index: 300;
   cursor: pointer;
 
   &_burger {
@@ -73,7 +74,7 @@ header {
       }
     }
   }
-  @include media-md {
+  @include Mobile {
     visibility: visible;
   }
 }
@@ -95,35 +96,30 @@ header {
   z-index: 300;
 }
 
-@include media-lg {
-  header {
+@include Mobile {
+  #header {
     margin-bottom: 1rem;
   }
   .menu-btn {
     visibility: visible;
   }
   .nav {
-    display: none;
+    position: relative;
     .menu-nav {
+      display: none;
       flex-direction: column;
-      position: absolute;
-      top: 4rem;
-      right: 0.5rem;
-      background-color: transparent;
+      top: -0.5rem;
+      right: -1rem;
+      background-color: $color-lighterPrime;
       color: $color-secondary;
-      width: 20%;
-      height: 20%;
-      z-index: 200;
+      position: absolute;
+
+      border-radius: 1rem;
+      @include shadow;
       gap: 1rem;
-      padding: 1;
-    }
-    &.open {
-      display: flex;
-      .menu-nav_item a {
-        color: $color-secondary;
-        &:hover {
-          color: $color-accent;
-        }
+      padding: 2rem;
+      &.open {
+        display: flex;
       }
     }
   }

@@ -29,10 +29,10 @@
   }
 }
 #home {
-  @include media-md {
+  @include Desktop {
     margin-top: 5rem;
   }
-  @include media-xsm {
+  @include Mobile {
     margin-top: 0;
   }
 }
@@ -185,8 +185,9 @@
   border-radius: 50%;
   border: 2px solid $color-secondary;
   object-fit: cover;
+  z-index: -300;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  @include media-md {
+  @include Mobile {
     width: 150px;
     height: 150px;
   }

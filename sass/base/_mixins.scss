@@ -30,13 +30,14 @@
   font-style: italic;
   letter-spacing: 1px;
   text-align: left;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-  @include media-md {
-    font-size: 1.1rem;
+
+  @include Desktop {
+    font-size: 1.3rem;
+    line-height: 1.2;
   }
-  @include media-sm {
+  @include Mobile {
     font-size: 1rem;
+    line-height: 1.4;
   }
 }
 
@@ -196,30 +197,41 @@
 }
 
 @mixin media-xsm {
-  @media screen and (max-width: 376px) {
+  @media screen and (min-width: 376px) {
     @content;
   }
 }
 
 @mixin media-sm {
-  @media screen and (max-width: 576px) {
+  @media screen and (min-width: 576px) {
     @content;
   }
 }
 @mixin media-md {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin media-lg {
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 992px) {
     @content;
   }
 }
 
 @mixin media-xl {
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin Mobile {
+  @media screen and (min-width: 300px) and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin Desktop {
+  @media screen and (min-width: 993px) and (max-width: 1200px) {
     @content;
   }
 }
