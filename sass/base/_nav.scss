@@ -18,16 +18,28 @@ header {
     span {
       font-weight: 800;
       @include p($color-accent);
-      line-height: 20px;
     }
   }
   .menu-nav {
     display: flex;
     align-self: center;
     gap: 2rem;
+
+    & > li a {
+      @include p($color-secondary);
+
+      &:hover {
+        color: $color-accent;
+      }
+      &.active {
+        color: $color-accent;
+      }
+    }
+    @include media-lg {
+      gap: 1rem;
+    }
   }
 }
-
 .menu-btn {
   visibility: hidden;
   padding: 1rem;
@@ -83,7 +95,7 @@ header {
   z-index: 300;
 }
 
-@include media-md {
+@include media-lg {
   header {
     margin-bottom: 1rem;
   }
