@@ -1701,6 +1701,7 @@ header .menu-nav > li a.active {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+    font-size: 1rem;
   }
 }
 #contact > div.container form > div.form-group::after {
