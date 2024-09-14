@@ -3,23 +3,23 @@
   & > div.container {
     & form {
       @include card;
+      margin-bottom: 5rem;
       background: $color-lighterPrime;
       & > div.form-group {
         max-width: 800px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
+        flex: 0 0 100%;
         margin-bottom: 1rem;
         & > div.col-label {
           flex: 0 0 25%;
-          margin-top: 1rem;
-          @include media-sm {
+          @include Mobile {
             flex: 0 0 100%;
-            margin-top: 0;
+            margin-top: 1rem;
           }
           & label {
             @include p($color-primary);
-
             padding: 1rem 1rem 1rem 0;
           }
         }
@@ -27,9 +27,10 @@
           flex: 0 0 75%;
           margin-top: 1rem;
 
-          @include media-sm {
+          @include Mobile {
             flex: 0 0 100%;
             margin-top: 0;
+            margin-left: 0;
           }
           & input,
           textarea {
@@ -55,7 +56,7 @@
         }
         & > div {
           flex: 0 0 25%;
-          @include media-sm {
+          @include Desktop {
             flex: 0 0 100%;
           }
         }
@@ -66,19 +67,18 @@
           color: white;
           font-size: 1.5rem;
           letter-spacing: 2px;
-          padding: 1rem 2rem;
+          padding: 0.5rem auto;
           border: 1px solid white;
           border-radius: 1rem;
           cursor: pointer;
           margin-top: 1rem;
           flex: 0 0 75%;
-          justify-content: end;
           &:hover {
             border: 1px solid $color-accent;
             color: $color-accent;
             background-color: $color-primary;
           }
-          @include media-sm {
+          @include Mobile {
             flex: 0 0 100%;
           }
         }

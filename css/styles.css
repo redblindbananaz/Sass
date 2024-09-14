@@ -1549,6 +1549,7 @@ header .menu-nav > li a.active {
   border-radius: 24px;
   margin: 2rem auto;
   padding: 2rem;
+  margin-bottom: 5rem;
   background: #757171;
 }
 @media screen and (min-width: 300px) and (max-width: 992px) {
@@ -1586,20 +1587,22 @@ header .menu-nav > li a.active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   margin-bottom: 1rem;
 }
 #contact > div.container form > div.form-group > div.col-label {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-  margin-top: 1rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form > div.form-group > div.col-label {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    margin-top: 0;
+    margin-top: 1rem;
   }
 }
 #contact > div.container form > div.form-group > div.col-label label {
@@ -1632,12 +1635,13 @@ header .menu-nav > li a.active {
           flex: 0 0 75%;
   margin-top: 1rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form > div.form-group > div.col-input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     margin-top: 0;
+    margin-left: 0;
   }
 }
 #contact > div.container form > div.form-group > div.col-input input,
@@ -1665,7 +1669,7 @@ header .menu-nav > li a.active {
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
   #contact > div.container form > div.form-group > div {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1678,7 +1682,7 @@ header .menu-nav > li a.active {
   color: white;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  padding: 1rem 2rem;
+  padding: 0.5rem auto;
   border: 1px solid white;
   border-radius: 1rem;
   cursor: pointer;
@@ -1686,16 +1690,13 @@ header .menu-nav > li a.active {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 75%;
           flex: 0 0 75%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
 }
 #contact > div.container form > div.form-group button:hover {
   border: 1px solid #fedc00;
   color: #fedc00;
   background-color: #333333;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 992px) {
   #contact > div.container form > div.form-group button {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
